@@ -1,0 +1,38 @@
+.add-center-maestro {
+  padding: 70px;
+  margin-left: 35%;
+  margin-top: 15%;
+  border: 1px solid red;
+  width: 600px;
+  border-radius: 20px;
+}
+
+.input-fullName {
+  display: flex
+}
+
+.input-fullName div {
+  margin-left: 20px !important;
+}
+
+.datePicker {
+  margin-left: 200px;
+}
+
+.add-center-maestro .input-fullName {
+  margin-left: 12%;
+}
+mat-dialog-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+::ng-deep.form-content .mat-form-field-wrapper {
+  padding: 0px;
+}
+
+mat-dialog-container {
+  padding: 0px !important;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

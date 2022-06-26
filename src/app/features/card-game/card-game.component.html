@@ -1,0 +1,19 @@
+<div class="fa-card-game">
+  <div class="container" *ngFor="let item of cardGame">
+    <div class="card">
+      <div class="imgBx">
+        <img [src]="item.img">
+      </div>
+      <div class="contentBx">
+        <h2>{{item.materia}}</h2>
+        <div class="size">
+          <span>Jugar</span>
+        </div>
+        <h3>{{item.puntos}} puntos</h3>
+        <h3>{{item.nivel}} puntos</h3>
+
+      </div>
+    </div>
+  </div>
+</div>
+

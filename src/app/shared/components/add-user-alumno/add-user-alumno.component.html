@@ -1,0 +1,103 @@
+<mat-toolbar>
+  <span style="color: black;">Alumno Registration</span>
+  <span class="example-spacer"></span>
+  <button style="color: rgba( 68, 243, 126 , 0.75);" mat-icon-button class="example-icon favorite-icon"
+          aria-label="Example icon-button with heart icon">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<form (ngSubmit)="onValidation()" name="fb_doctor" [formGroup]="fb_doctor">
+
+  <div style="display: flex; ">
+    <div class="emailInput">
+      <mat-form-field class="full-width-name" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input class="input-name" formControlName="name" matInput placeholder="Enter Name"/>
+      </mat-form-field>
+    </div>
+
+
+  </div>
+  <div class="emailInput">
+    <mat-form-field class="full-width-last_name" appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input class="input-last_name" formControlName="last_name" matInput placeholder="Enter Last_name "
+      />
+
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex; width: 500px;">
+
+    <div class="emailInput" style="width: 500px;">
+      <div class="">
+        <mat-form-field appearance="fill" class="example-form-field">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="datepicker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+          <mat-datepicker #datepicker>
+            <mat-datepicker-actions>
+              <button mat-button matDatepickerCancel>Cancel</button>
+              <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+            </mat-datepicker-actions>
+          </mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <!--FORMULARIO REACTIVO -->
+  <div>
+    <p>
+      <mat-toolbar class="mat">
+        <span class="span-init">Materia Resgistrar  </span>
+        <span class="example-spacer"></span>
+        <button (click)="addTelefono()" mat-icon-button class="button" aria-label="Example icon-button with heart icon">
+          <mat-icon>add</mat-icon>
+        </button>
+
+      </mat-toolbar>
+    </p>
+    <div formArrayName="telefonos">
+      <div *ngFor="let item of getTelefonos.controls let pointIndex=index" [formGroupName]="pointIndex">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Materia Registrar
+              </mat-panel-title>
+              <button (click)="remove(pointIndex)" mat-icon-button class="button"
+                      aria-label="Example icon-button with heart icon">
+                <mat-icon class="icon-delete">delete</mat-icon>
+              </button>
+            </mat-expansion-panel-header>
+            <div class="form-input">
+            </div>
+            <div class="input-under">
+              <mat-form-field appearance="fill" style="width: 350px;">
+                <mat-label>Materia:</mat-label>
+                <input matInput class="input-manager" formControlName="email">
+              </mat-form-field>
+              <mat-form-field appearance="fill" style="width: 350px;">
+                <mat-label>Nota*:</mat-label>
+                <input matInput class="input-manager" formControlName="contacto">
+              </mat-form-field>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+  <!--FINNNN...!!!! -->
+
+  <mat-toolbar>
+    <button mat-stroked-button style="color: grey; border-color: rgba( 68, 243, 126 , 0.75);">CANCELAR</button>
+    <span class="example-spacer"></span>
+    <button mat-button mat-stroked-button
+            style="color: white; width: 110px; background-color: rgba( 68, 243, 126 , 0.75);">SAVE
+    </button>
+  </mat-toolbar>
+</form>

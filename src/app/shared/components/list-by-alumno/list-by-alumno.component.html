@@ -19,33 +19,46 @@
   <table mat-table [dataSource]="dataSource" matSort>
 
     <!-- ID Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header=""> Nombre Apellido </th>
+      <td mat-cell *matCellDef="let row"> {{row.nombre}} {{row.apellido}} </td>
     </ng-container>
 
     <!-- Progress Column -->
-    <ng-container matColumnDef="progress">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-      <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+    <ng-container matColumnDef="apellido">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header=""> UserName </th>
+      <td mat-cell *matCellDef="let row"> {{row.userName}}</td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell class="action-column_content" *matCellDef="let element">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon aria-label="label">more_horiz</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click) = "updateDialog(element.id)">
+            <mat-icon class="icon-color" aria-label="edit-icon">edit</mat-icon>
+            <mat-label>Editar</mat-label>
+          </button>
+          <button mat-menu-item (click) = "delete(element.id)">
+            <mat-icon aria-label="delete-icon" color="warn">delete_outline</mat-icon>
+            <mat-label>Eliminar</mat-label>
+          </button>
+          <button mat-menu-item (click) = "openDialog2(element.id)">
+            <mat-icon aria-label="receipt-icon" color="icon-color">receipt</mat-icon>
+            <mat-label>Historial</mat-label>
+          </button>
+
+        </mat-menu>
+      </td>
     </ng-container>
 
-    <!-- Fruit Column -->
-    <ng-container matColumnDef="fruit">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit </th>
-      <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
-    </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr (click)="openDialog2()"  mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr  mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-    <!-- Row shown when there is no matching data. -->
     <tr class="mat-row" *matNoDataRow>
       <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
     </tr>

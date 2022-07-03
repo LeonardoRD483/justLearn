@@ -1,0 +1,56 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <section>
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list class="nav-bar">
+        <mat-list-item class="nav-list__title" disabled="true">Panel de Control</mat-list-item>
+        <a mat-list-item class="link-a" routerLink="hospitals" routerLinkActive="active"
+           (click)="getTitleNavBar('Home')">
+          <mat-icon> business </mat-icon>
+          <mat-label>Top Alumnos</mat-label>
+        </a>
+        <a mat-list-item class="link-a" routerLink="doctor" routerLinkActive="active"
+           (click)="getTitleNavBar('Doctores')">
+          <mat-icon> people </mat-icon>
+          <mat-label>Lista Jugadores</mat-label>
+        </a>
+        <a mat-list-item class="link-a" routerLink="patient" routerLinkActive="active"
+           (click)="getTitleNavBar('Pacientes')">
+          <mat-icon> account_box </mat-icon>
+          <mat-label>Top Alumnos</mat-label>
+        </a>
+
+
+      </mat-nav-list>
+    </section>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="header-toolbar">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+              *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span *ngIf="navBarTitle">{{navBarTitle}}</span>
+      <span class="spacer"></span>
+      <mat-card class="card-img">
+        <div class="img-profile" [matMenuTriggerFor]="menu">
+          <img mat-card-avatar
+               src="https://s16.picofile.com/file/8414366276/105_1055656_account_user_profile_avatar_avatar_user_profile_icon.png"
+               alt="imagen de perfil">
+          <mat-icon>expand_more</mat-icon>
+        </div>
+      </mat-card>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </a>
+      </mat-menu>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

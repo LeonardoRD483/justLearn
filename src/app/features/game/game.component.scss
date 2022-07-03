@@ -85,6 +85,10 @@ body #results #result::before {
   content: counter(correct);
 }
 
+.active {
+  background: rgba( 68, 243, 126 , 0.75);
+}
+
 html,
 body {
   overflow: hidden;

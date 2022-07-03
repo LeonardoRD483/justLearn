@@ -12,13 +12,13 @@
   </div><!--/.back-img-->
   <div class="form-section">
 
-    <form action="#">
+    <form name="fb_doctor" [formGroup]="fb_doctor">
       <!--Email-->
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <div class="example-container">
           <mat-form-field appearance="fill">
             <mat-label>Enter your Name</mat-label>
-            <input matInput placeholder="pat@example.com">
+            <input formControlName="userName" matInput placeholder="pat@example.com">
           </mat-form-field>
         </div>
       </div>
@@ -29,7 +29,7 @@
         <div class="example-container">
           <mat-form-field appearance="fill">
             <mat-label>Enter your Name</mat-label>
-            <input matInput placeholder="pat@example.com">
+            <input type="password" formControlName="password" matInput placeholder="pat@example.com">
           </mat-form-field>
         </div>
       </div>
@@ -37,7 +37,7 @@
       <p class="forgot-text">Forgot Password ?</p>
     </form>
   </div>
-  <button>
+  <button (click)="login()" >
    Log In
   </button>
   <button (click)="openDialog()" >

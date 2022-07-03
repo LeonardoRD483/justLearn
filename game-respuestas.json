@@ -1,0 +1,55 @@
+{
+  "materia": [
+    {
+      "historia": {
+        "nivel": [
+          {
+            "nivel": "basic",
+            "pregunta": 0,
+            "respuestas": [
+              {
+                "name": "es arquero",
+                "correcto": 0
+              },
+              {
+                "name": "es arquero",
+                "correcto": 0
+              },
+              {
+                "name": "es arquero",
+                "correcto": 0
+              },
+              {
+                "name": "es arquero",
+                "correcto": 1
+              }
+            ]
+          },
+          {
+            "nivel": "basic",
+            "pregunta": 1,
+            "respuestas": [
+              {
+                "name": "es arquero1",
+                "correcto": 0
+              },
+              {
+                "name": "es arquero1",
+                "correcto": 0
+              },
+              {
+                "name": "es arquero1",
+                "correcto": 0
+              },
+              {
+                "name": "es arquero1",
+                "correcto": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+

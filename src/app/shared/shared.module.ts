@@ -22,6 +22,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatExpansionModule} from "@angular/material/expansion";
 import { DashboardAlumnoComponent } from './components/dashboard-alumno/dashboard-alumno.component';
 import {NgChartsModule} from "ng2-charts";
+import {HttpClientModule} from "@angular/common/http";
+import {MatSortModule} from "@angular/material/sort";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -34,25 +37,28 @@ import {NgChartsModule} from "ng2-charts";
     AddUserMaestroComponent,
     ListByAlumnoComponent
   ],
-  imports: [
-    CommonModule,
-    SharedRoutingModule,
-    AngularModule,
-    MatFormFieldModule,
-    MatInputModule,
-    RouterModule,
-    AngularModule,
-    MatDatepickerModule,
-    MatButtonModule,
-    MatNativeDateModule,
-    MatDialogModule,
-    MatToolbarModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatExpansionModule,
-    NgChartsModule,
-  ]
+    imports: [
+        CommonModule,
+        SharedRoutingModule,
+        AngularModule,
+        MatFormFieldModule,
+        MatInputModule,
+        RouterModule,
+        AngularModule,
+        MatDatepickerModule,
+        MatButtonModule,
+        MatNativeDateModule,
+        MatDialogModule,
+        MatToolbarModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatExpansionModule,
+        NgChartsModule,
+        HttpClientModule,
+        MatSortModule,
+        MatMenuModule
+    ]
 })
 export class SharedModule { }

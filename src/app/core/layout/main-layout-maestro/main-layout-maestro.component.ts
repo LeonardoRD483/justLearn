@@ -3,11 +3,12 @@ import {map, Observable, shareReplay} from "rxjs";
 import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 
 @Component({
-  selector: 'app-main-layout',
-  templateUrl: './main-layout.component.html',
-  styleUrls: ['./main-layout.component.scss']
+  selector: 'app-main-layout-maestro',
+  templateUrl: './main-layout-maestro.component.html',
+  styleUrls: ['./main-layout-maestro.component.scss']
 })
-export class MainLayoutComponent implements OnInit {
+export class MainLayoutMaestroComponent implements OnInit {
+
   navBarTitle = '';
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

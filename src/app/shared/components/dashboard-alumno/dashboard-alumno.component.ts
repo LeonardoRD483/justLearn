@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-dashboard-alumno',
@@ -44,9 +45,10 @@ export class DashboardAlumnoComponent implements OnInit {
       img: 'https://palosfrontera.com/wp-content/uploads/2017/11/noticias-deporte.png'
     }
   ]
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
+    console.log(this.data.data)
   }
 
 }

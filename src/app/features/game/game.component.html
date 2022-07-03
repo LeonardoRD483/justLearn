@@ -1,56 +1,20 @@
+<h1>{{this.data_pts.puntos}}</h1>
 <div class="circle">
   <div id="stopwatch" class="stopwatch">{{this.timeLeft}}</div>
   <div class="buttons">
   </div>
 </div>
 <div id="seconds-sphere" class="seconds-sphere"></div>
-<div class="options box" id="q-4" *ngIf="estado == 5">
-  <div class="question">Quien es Messi5?</div>
-  <label for="a-4-c">es un arquero</label>
-  <label for="a-4-i-0">un loco</label>
-  <label for="a-4-i-1">un enfermo</label>
-  <label for="a-4-i-2">un perro</label>
-  <a (click)="cambiarEstado(6)">Complete Game</a>
-</div>
-
-<div class="options box" id="q-3" *ngIf="estado == 4">
-  <div class="question">Quien es Messi4?</div>
-  <label for="a-4-c">es un arquero</label>
-  <label for="a-4-i-0">un loco</label>
-  <label for="a-4-i-1">un enfermo</label>
-  <label for="a-4-i-2">un perro</label>
-  <a (click)="cambiarEstado(5)">Confirm Answer</a>
-</div>
-
-<div class="options box" id="q-2" *ngIf="estado == 3">
-  <div class="question">Quien es Messi3?</div>
-  <label for="a-4-c">es un arquero</label>
-  <label for="a-4-i-0">un loco</label>
-  <label for="a-4-i-1">un enfermo</label>
-  <label for="a-4-i-2">un perro</label>
-  <a (click)="cambiarEstado(4)">Confirm Answer</a>
-</div>
-
-<div class="options box" id="q-1" *ngIf="estado == 2">
-  <div class="question">Quien es Messi2?</div>
-  <label for="a-4-c">es un arquero</label>
-  <label for="a-4-i-0">un loco</label>
-  <label for="a-4-i-1">un enfermo</label>
-  <label for="a-4-i-2">un perro</label>
-  <a (click)="cambiarEstado(3)">Confirm Answer</a>
-</div>
-
 <div class="options box" *ngIf="estado == 1">
-  <div class="question">Quien es Messi1?</div>
-  <label for="a-4-c">es un arquero</label>
-  <label for="a-4-i-0">un loco</label>
-  <label for="a-4-i-1">un enfermo</label>
-  <label for="a-4-i-2">un perro</label>
-  <a (click)="cambiarEstado(2)">Confirm Answer</a>
+  <div class="question">{{this.pregunta_actual.name}}</div>
+  <div *ngFor="let item of respuesta; let i = index">
+    <label (click)="validarRes(item)" for="a-4-c">{{item['name']}}</label>
+  </div>
+  <a (click)="cargarRespuestasByNiveles(1,true)">Confirm Answer</a>
 </div>
 
 <div class="box" id="welcome" *ngIf="estado == 0">
   <h2>Just Learn</h2>
   <p>Bienvenido a Just Learn aqui podras reforzar tu mente</p>
-  <a (click)="cambiarEstado(1)">Start Game</a>
+  <a (click)="cargarRespuestasByNiveles(0, false)">Start Game</a>
 </div>

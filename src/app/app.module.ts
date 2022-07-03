@@ -21,7 +21,7 @@ import {LoginModule} from "./features/login/login.module";
     RouterModule,
     SharedModule,
     CoreModule,
-    LoginModule
+    LoginModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent]

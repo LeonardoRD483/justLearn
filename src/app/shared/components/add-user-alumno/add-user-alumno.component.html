@@ -79,11 +79,11 @@
             <div class="input-under">
               <mat-form-field appearance="fill" style="width: 350px;">
                 <mat-label>Materia:</mat-label>
-                <input matInput class="input-manager" formControlName="email">
+                <input matInput class="input-manager" formControlName="materia">
               </mat-form-field>
               <mat-form-field appearance="fill" style="width: 350px;">
                 <mat-label>Nota*:</mat-label>
-                <input matInput class="input-manager" formControlName="contacto">
+                <input matInput class="input-manager" formControlName="nota">
               </mat-form-field>
             </div>
           </mat-expansion-panel>
@@ -96,7 +96,7 @@
   <mat-toolbar>
     <button mat-stroked-button style="color: grey; border-color: rgba( 68, 243, 126 , 0.75);">CANCELAR</button>
     <span class="example-spacer"></span>
-    <button mat-button mat-stroked-button
+    <button (click)="createUser()"  mat-button mat-stroked-button
             style="color: white; width: 110px; background-color: rgba( 68, 243, 126 , 0.75);">SAVE
     </button>
   </mat-toolbar>

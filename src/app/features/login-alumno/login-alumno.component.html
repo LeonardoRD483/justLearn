@@ -1,19 +1,16 @@
-
-
 <div class="signin">
   <div class="back-img">
     <div class="sign-in-text">
       <h2 class="active">Sign In</h2>
       <h2 class="nonactive">Sign Up</h2>
-    </div><!--/.sign-in-text-->
+    </div>
     <div class="layer">
-    </div><!--/.layer-->
+    </div>
     <p class="point">&#9650;</p>
-  </div><!--/.back-img-->
+  </div>
   <div class="form-section">
 
     <form name="fb_doctor" [formGroup]="fb_doctor">
-      <!--Email-->
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <div class="example-container">
           <mat-form-field appearance="fill">
@@ -24,7 +21,6 @@
       </div>
       <br/>
       <br/>
-      <!--Password-->
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <div class="example-container">
           <mat-form-field appearance="fill">
@@ -34,15 +30,7 @@
         </div>
       </div>
       <br/>
-      <p class="forgot-text">Forgot Password ?</p>
     </form>
   </div>
-  <button mat-raised-button color="primary" (click)="login()" >
-   Log In
-  </button>
-  <button mat-raised-button color="primary" (click)="openDialog()" >
-    Sign In
-  </button><!--/button-->
-</div><!--/.signin-->
-
-
+  <button style="margin-left: 18%; width: 300px" (click)="login()" mat-raised-button color="primary">Log In</button>
+</div>

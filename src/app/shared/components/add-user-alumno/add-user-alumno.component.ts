@@ -10,6 +10,7 @@ import Swal from "sweetalert2";
 })
 export class AddUserAlumnoComponent implements OnInit {
   private imagePath: any;
+  alumno_id: any = 0;
 
   get message(): string {
     return this._message;
@@ -25,13 +26,18 @@ export class AddUserAlumnoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.initDataAlumno();
+  }
+
+  initDataAlumno() {
+    console.log(localStorage.getItem('alumno_id'))
   }
 
   fb_doctor: FormGroup = this.fb.group({
     name: [''],
     last_name: [''],
     date: [''],
-    telefonos: this.fb.array([this.fb.group({materia: [''], alumno_id: [1], nota: ['']})])
+    telefonos: this.fb.array([this.fb.group({materia: [''], alumno_id: [this.alumno_id], nota: ['']})])
 
   })
   control = <FormArray>this.fb_doctor.controls['telefonos']
@@ -49,7 +55,7 @@ export class AddUserAlumnoComponent implements OnInit {
   }
 
   addTelefono() {
-    this.control.push(this.fb.group({materia: [''], alumno_id: [1], nota: ['']}))
+    this.control.push(this.fb.group({materia: [''], alumno_id: [this.alumno_id], nota: ['']}))
   }
 
   remove(pointIndex: number) {
@@ -84,9 +90,9 @@ export class AddUserAlumnoComponent implements OnInit {
       userAndPassword.password,
       this.fb_doctor.get('date')?.value,
       this.fb_doctor.get('name')?.value,
-      this.fb_doctor.get('last_name')?.value, 1).subscribe((response) => {
+      this.fb_doctor.get('last_name')?.value, localStorage.getItem('maestro_id')).subscribe((response) => {
+        this.alumno_id = response.id;
         this.createMateriaByUser();
-        console.log(response)
       }, err => {
         console.log(err)
       }
@@ -103,6 +109,9 @@ export class AddUserAlumnoComponent implements OnInit {
   }
 
   createMateriaByUser() {
+    this.getTelefonos.controls.forEach(item => {
+      item.get('alumno_id')?.setValue(this.alumno_id)
+    })
     console.log(this.fb_doctor.get('telefonos')?.value);
     this.userService.createMateriaAndGeneratedLevel(this.fb_doctor.get('telefonos')?.value).subscribe(
       (response) => {

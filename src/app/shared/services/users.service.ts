@@ -22,6 +22,10 @@ export class UsersService {
     return this.http.get(`${this.url}/login/${user}/${password}`);
   }
 
+  loginAlumno(user: string, password: string): Observable<any> {
+    return this.http.get(`${this.urlAlumno}/login/${user}/${password}`);
+  }
+
   createUser(userName: string, password: string, date: Date, name: string, apellido: string): Observable<any> {
     let user = {
       nombre: name,
@@ -34,7 +38,7 @@ export class UsersService {
     return this.http.post(`${this.url}`, user);
   }
 
-  createUserAlumno(userName: string, password: string, date: Date, name: string, apellido: string, maestro_id: number): Observable<any> {
+  createUserAlumno(userName: string, password: string, date: Date, name: string, apellido: string, maestro_id: any): Observable<any> {
     let user = {
       nombre: name,
       apellido: apellido,
@@ -51,12 +55,16 @@ export class UsersService {
     return this.http.post(`${this.urlMateria}`, materia);
   }
 
-  listAlumno(num: number) {
+  listAlumno(num: any) {
     return this.http.get(`${this.urlAlumno}/byMaestro/${num}`)
   }
 
   updatePuntos(puntos: any) {
     return this.http.put(`${this.urlPts}`, puntos)
+  }
+
+  createPuntos(puntos: any) {
+    return this.http.post(`${this.urlPts}`, puntos)
   }
 
   listPuntosByalumnoAndMateria(alumno_id: number, materia_id: number) {
@@ -70,4 +78,13 @@ export class UsersService {
   updateNivel(obj: any) {
     return this.http.post(`${this.urlNivel}`, obj);
   }
+
+  dashBoard(id_alumno: any) {
+    return this.http.get(`${this.urlHistorial}/dashBoard/${id_alumno}`);
+  }
+
+  byMateria(id_alumno: any) {
+    return this.http.get(`${this.urlMateria}/byMateria/${id_alumno}`);
+  }
+
 }

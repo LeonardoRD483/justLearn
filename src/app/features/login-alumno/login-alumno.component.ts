@@ -1,17 +1,18 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
-import {AddUserMaestroComponent} from "../../shared/components/add-user-maestro/add-user-maestro.component";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {UsersService} from "../../shared/services/users.service";
 import {Router} from "@angular/router";
-import Swal from 'sweetalert2'
+import {AddUserMaestroComponent} from "../../shared/components/add-user-maestro/add-user-maestro.component";
+import Swal from "sweetalert2";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-login-alumno',
+  templateUrl: './login-alumno.component.html',
+  styleUrls: ['./login-alumno.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginAlumnoComponent implements OnInit {
+
 
   constructor(public dialog: MatDialog, private fb: FormBuilder, private userService: UsersService, private router: Router) {
   }
@@ -37,12 +38,11 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.userService.login(this.fb_doctor.get('userName')?.value, this.fb_doctor.get('password')?.value)
+    this.userService.loginAlumno(this.fb_doctor.get('userName')?.value, this.fb_doctor.get('password')?.value)
       .subscribe((response: any) => {
-        console.log(response);
-        localStorage.setItem('maestro_id', response.id);
-        if (response && response.tipo === '1'){
-          this.router.navigate(["layout/addMaestro"]);
+        localStorage.setItem('alumno_id', response.id)
+        if (response && response.tipo === '0') {
+          this.router.navigate(["layout-alummno/card-game"]);
         }
       }, err => {
         Swal.fire({
@@ -54,4 +54,5 @@ export class LoginComponent implements OnInit {
         console.log(err);
       })
   }
+
 }

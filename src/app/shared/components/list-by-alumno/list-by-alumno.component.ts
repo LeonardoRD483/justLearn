@@ -46,7 +46,7 @@ export class ListByAlumnoComponent implements OnInit {
   }
 
   listAlumno() {
-    this.userService.listAlumno(1).subscribe((response) => {
+    this.userService.listAlumno(localStorage.getItem('maestro_id')).subscribe((response) => {
         console.log(response)
         this.dataSource = response;
         console.log(this.dataSource);

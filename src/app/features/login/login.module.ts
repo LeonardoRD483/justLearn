@@ -8,21 +8,23 @@ import {MatInputModule} from "@angular/material/input";
 import {SharedModule} from "../../shared/shared.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
   declarations: [
     LoginComponent
   ],
-  imports: [
-    CommonModule,
-    LoginRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    SharedModule,
-    ReactiveFormsModule,
-    RouterModule
-  ]
+    imports: [
+        CommonModule,
+        LoginRoutingModule,
+        MatFormFieldModule,
+        MatInputModule,
+        SharedModule,
+        ReactiveFormsModule,
+        RouterModule,
+        MatButtonModule
+    ]
 })
 export class LoginModule {
 }

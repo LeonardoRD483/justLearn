@@ -5,13 +5,12 @@
         <img [src]="item.img">
       </div>
       <div class="contentBx">
-        <h2>{{item.materia}}</h2>
-        <div class="size">
+        <h2>{{item[2]}}</h2>
+        <div (click)="openGame(item)" class="size">
           <span>Jugar</span>
         </div>
-        <h3>{{item.puntos}} puntos</h3>
-        <h3>{{item.nivel}} puntos</h3>
-
+        <h3>Puntos : {{item[4]}} </h3>
+        <h3>Nivel: {{item[3]}}</h3>
       </div>
     </div>
   </div>

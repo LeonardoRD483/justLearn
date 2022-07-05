@@ -8,6 +8,147 @@
             "respuestas": [
               {
                 "pregunta": 0,
+                "name": "¿De qué nacionalidad era Juana de Arco?"
+              },
+              {
+                "pregunta": 1,
+                "name": "¿Quién dibujo al famoso Hombre de Vitruvio?"
+              },
+              {
+                "pregunta": 2,
+                "name": "¿Qué famoso filósofo fue maestro de Alejandro Magno durante cinco años?"
+              },
+              {
+                "pregunta": 3,
+                "name": "¿Quién fue el último zar de Rusia?"
+              },
+              {
+                "pregunta": 4,
+                "name": "¿Quienes eran los templarios?"
+              },
+              {
+                "pregunta": 5,
+                "name": "¿Qué inició la Segunda Guerra Mundial?"
+              },
+              {
+                "pregunta": 6,
+                "name": "¿Dónde se han encontrado principalmente pinturas del período Paleolítico?"
+              },
+              {
+                "pregunta": 7,
+                "name": "¿Era Averroes un antiguo filósofo griego?"
+              },
+              {
+                "pregunta": 8,
+                "name": "¿Cómo comenzó la Primera Guerra Mundial?"
+              },
+              {
+                "pregunta": 9,
+                "name": "¿Es la prehistoria la etapa más larga del ser humano?"
+              }
+            ]
+          },
+          {
+            "nivel": "intermedio",
+            "respuestas": [
+              {
+                "pregunta": 0,
+                "name": "En qué año descubrió Cristóbal Colón, América"
+              },
+              {
+                "pregunta": 1,
+                "name": "¿De qué año es la primera Constitución española, la Pepa?"
+              },
+              {
+                "pregunta": 2,
+                "name": "¿De qué nacionalidad era Adolf Hitler?"
+              },
+              {
+                "pregunta": 3,
+                "name": "Nombra al menos tres países que participaron en el bando aliado en la Primera Guerra Mundial."
+              },
+              {
+                "pregunta": 4,
+                "name": "¿A qué emperador romano asesinó un grupo de senadores?"
+              },
+              {
+                "pregunta": 5,
+                "name": "¿Quién dijo que la tierra giraba alrededor del sol?"
+              },
+              {
+                "pregunta": 6,
+                "name": "¿Qué institución eclesiástica mandó a la hoguera a hombres y mujeres por brujos, impuros y herejes?"
+              },
+              {
+                "pregunta": 7,
+                "name": "¿Cuál es el antiguo nombre de San Petersburgo?"
+              },
+              {
+                "pregunta": 8,
+                "name": "¿Qué famosa batalla perdió y dejó humillado a Napoleón Bonaparte?"
+              },
+              {
+                "pregunta": 9,
+                "name": "¿Quién nació antes Jesucristo o Mahoma?"
+              }
+            ]
+          },
+          {
+            "nivel": "experto",
+            "respuestas": [
+              {
+                "pregunta": 0,
+                "name": "¿Quién fue el primer presidente de los Estados Unidos?"
+              },
+              {
+                "pregunta": 1,
+                "name": "¿Qué isla generó un conflicto entre Reino Unido y Argentina?"
+              },
+              {
+                "pregunta": 2,
+                "name": "¿De qué nacionalidad era Ernesto Ché Guevara?"
+              },
+              {
+                "pregunta": 3,
+                "name": "¿En qué año cayó el Imperio Romano de Occidente? Año 476 o 572."
+              },
+              {
+                "pregunta": 4,
+                "name": "¿Quién fue el primer explorador occidental en llegar a China?"
+              },
+              {
+                "pregunta": 5,
+                "name": "¿A quién nombro senador Calígula?"
+              },
+              {
+                "pregunta": 6,
+                "name": "¿Qué imperio conquistó el antiguo Egipto en el año 30 a. C.?"
+              },
+              {
+                "pregunta": 7,
+                "name": "¿Quién fue el primer hombre que pisó la luna?"
+              },
+              {
+                "pregunta": 8,
+                "name": "¿Qué presidente estadounidense fue asesinado en Dallas?"
+              },
+              {
+                "pregunta": 9,
+                "name": "¿En qué país se inició la Revolución Industrial?"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "literatura": {
+        "nivel": [
+          {
+            "nivel": "basic",
+            "respuestas": [
+              {
+                "pregunta": 0,
                 "name": "¿Quien es Messi?"
               },
               {
@@ -16,87 +157,268 @@
               },
               {
                 "pregunta": 2,
-                "name": "¿Quien es Messi?"
+                "name": "¿Quien es Messi?3"
               },
               {
                 "pregunta": 3,
-                "name": "¿Quien es Messi?"
+                "name": "¿Quien es Messi?4"
               },
               {
                 "pregunta": 4,
-                "name": "¿Quien es Messi?"
+                "name": "¿Quien es Messi?5"
               },
               {
                 "pregunta": 5,
-                "name": "¿Quien es Messi?"
+                "name": "¿Quien es Messi?6"
               },
               {
                 "pregunta": 6,
-                "name": "¿Quien es Messi?"
+                "name": "¿Quien es Messi?7"
               },
               {
                 "pregunta": 7,
-                "name": "¿Quien es Messi?"
+                "name": "¿Quien es Messi?8"
               },
               {
                 "pregunta": 8,
-                "name": "¿Quien es Messi?"
+                "name": "¿Quien es Messi?9"
               },
               {
                 "pregunta": 9,
-                "name": "¿Quien es Messi?"
+                "name": "¿Quien es Messi?10"
               }
             ]
           },
           {
             "nivel": "intermedio",
-            "respuestas": {
-              "pregunta-1": "¿Quien es Messi?",
-              "pregunta-2": "¿Quien es Messi?",
-              "pregunta-3": "¿Quien es Messi?",
-              "pregunta-4": "¿Quien es Messi?",
-              "pregunta-5": "¿Quien es Messi?",
-              "pregunta-6": "¿Quien es Messi?",
-              "pregunta-7": "¿Quien es Messi?",
-              "pregunta-8": "¿Quien es Messi?",
-              "pregunta-9": "¿Quien es Messi?",
-              "pregunta-10": "¿Quien es Messi?",
-              "pregunta-11": "¿Quien es Messi?",
-              "pregunta-12": "¿Quien es Messi?",
-              "pregunta-13": "¿Quien es Messi?",
-              "pregunta-14": "¿Quien es Messi?",
-              "pregunta-15": "¿Quien es Messi?",
-              "pregunta-16": "¿Quien es Messi?",
-              "pregunta-17": "¿Quien es Messi?",
-              "pregunta-18": "¿Quien es Messi?",
-              "pregunta-19": "¿Quien es Messi?",
-              "pregunta-20": "¿Quien es Messi?"
-            }
+            "respuestas": [
+              {
+                "pregunta": 0,
+                "name": "¿Quien es Messi?-intermedio"
+              },
+              {
+                "pregunta": 1,
+                "name": "¿Quien es Messi?2"
+              },
+              {
+                "pregunta": 2,
+                "name": "¿Quien es Messi?3"
+              },
+              {
+                "pregunta": 3,
+                "name": "¿Quien es Messi?4"
+              },
+              {
+                "pregunta": 4,
+                "name": "¿Quien es Messi?5"
+              },
+              {
+                "pregunta": 5,
+                "name": "¿Quien es Messi?6"
+              },
+              {
+                "pregunta": 6,
+                "name": "¿Quien es Messi?7"
+              },
+              {
+                "pregunta": 7,
+                "name": "¿Quien es Messi?8"
+              },
+              {
+                "pregunta": 8,
+                "name": "¿Quien es Messi?9"
+              },
+              {
+                "pregunta": 9,
+                "name": "¿Quien es Messi?10"
+              }
+            ]
           },
           {
             "nivel": "experto",
-            "respuestas": {
-              "pregunta-1": "¿Quien es Messi?",
-              "pregunta-2": "¿Quien es Messi?",
-              "pregunta-3": "¿Quien es Messi?",
-              "pregunta-4": "¿Quien es Messi?",
-              "pregunta-5": "¿Quien es Messi?",
-              "pregunta-6": "¿Quien es Messi?",
-              "pregunta-7": "¿Quien es Messi?",
-              "pregunta-8": "¿Quien es Messi?",
-              "pregunta-9": "¿Quien es Messi?",
-              "pregunta-10": "¿Quien es Messi?",
-              "pregunta-11": "¿Quien es Messi?",
-              "pregunta-12": "¿Quien es Messi?",
-              "pregunta-13": "¿Quien es Messi?",
-              "pregunta-14": "¿Quien es Messi?",
-              "pregunta-15": "¿Quien es Messi?",
-              "pregunta-16": "¿Quien es Messi?",
-              "pregunta-17": "¿Quien es Messi?",
-              "pregunta-18": "¿Quien es Messi?",
-              "pregunta-19": "¿Quien es Messi?",
-              "pregunta-20": "¿Quien es Messi?"
-            }
+            "respuestas": [
+              {
+                "pregunta": 0,
+                "name": "¿Quien es Messi?-experto"
+              },
+              {
+                "pregunta": 1,
+                "name": "¿Quien es Messi?2"
+              },
+              {
+                "pregunta": 2,
+                "name": "¿Quien es Messi?3"
+              },
+              {
+                "pregunta": 3,
+                "name": "¿Quien es Messi?4"
+              },
+              {
+                "pregunta": 4,
+                "name": "¿Quien es Messi?5"
+              },
+              {
+                "pregunta": 5,
+                "name": "¿Quien es Messi?6"
+              },
+              {
+                "pregunta": 6,
+                "name": "¿Quien es Messi?7"
+              },
+              {
+                "pregunta": 7,
+                "name": "¿Quien es Messi?8"
+              },
+              {
+                "pregunta": 8,
+                "name": "¿Quien es Messi?9"
+              },
+              {
+                "pregunta": 9,
+                "name": "¿Quien es Messi?10"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "arte": {
+        "nivel": [
+          {
+            "nivel": "basic",
+            "respuestas": [
+              {
+                "pregunta": 0,
+                "name": "¿Quien es Messi?"
+              },
+              {
+                "pregunta": 1,
+                "name": "¿Quien es Messi?2"
+              },
+              {
+                "pregunta": 2,
+                "name": "¿Quien es Messi?3"
+              },
+              {
+                "pregunta": 3,
+                "name": "¿Quien es Messi?4"
+              },
+              {
+                "pregunta": 4,
+                "name": "¿Quien es Messi?5"
+              },
+              {
+                "pregunta": 5,
+                "name": "¿Quien es Messi?6"
+              },
+              {
+                "pregunta": 6,
+                "name": "¿Quien es Messi?7"
+              },
+              {
+                "pregunta": 7,
+                "name": "¿Quien es Messi?8"
+              },
+              {
+                "pregunta": 8,
+                "name": "¿Quien es Messi?9"
+              },
+              {
+                "pregunta": 9,
+                "name": "¿Quien es Messi?10"
+              }
+            ]
+          },
+          {
+            "nivel": "intermedio",
+            "respuestas": [
+              {
+                "pregunta": 0,
+                "name": "¿Quien es Messi?-intermedio"
+              },
+              {
+                "pregunta": 1,
+                "name": "¿Quien es Messi?2"
+              },
+              {
+                "pregunta": 2,
+                "name": "¿Quien es Messi?3"
+              },
+              {
+                "pregunta": 3,
+                "name": "¿Quien es Messi?4"
+              },
+              {
+                "pregunta": 4,
+                "name": "¿Quien es Messi?5"
+              },
+              {
+                "pregunta": 5,
+                "name": "¿Quien es Messi?6"
+              },
+              {
+                "pregunta": 6,
+                "name": "¿Quien es Messi?7"
+              },
+              {
+                "pregunta": 7,
+                "name": "¿Quien es Messi?8"
+              },
+              {
+                "pregunta": 8,
+                "name": "¿Quien es Messi?9"
+              },
+              {
+                "pregunta": 9,
+                "name": "¿Quien es Messi?10"
+              }
+            ]
+          },
+          {
+            "nivel": "experto",
+            "respuestas": [
+              {
+                "pregunta": 0,
+                "name": "¿Quien es Messi?-experto"
+              },
+              {
+                "pregunta": 1,
+                "name": "¿Quien es Messi?2"
+              },
+              {
+                "pregunta": 2,
+                "name": "¿Quien es Messi?3"
+              },
+              {
+                "pregunta": 3,
+                "name": "¿Quien es Messi?4"
+              },
+              {
+                "pregunta": 4,
+                "name": "¿Quien es Messi?5"
+              },
+              {
+                "pregunta": 5,
+                "name": "¿Quien es Messi?6"
+              },
+              {
+                "pregunta": 6,
+                "name": "¿Quien es Messi?7"
+              },
+              {
+                "pregunta": 7,
+                "name": "¿Quien es Messi?8"
+              },
+              {
+                "pregunta": 8,
+                "name": "¿Quien es Messi?9"
+              },
+              {
+                "pregunta": 9,
+                "name": "¿Quien es Messi?10"
+              }
+            ]
           }
         ]
       }

@@ -1,4 +1,4 @@
-<h1>{{this.data_pts.puntos}}</h1>
+<h1> PUNTOS {{this.data_pts.puntos}}</h1>
 <div class="circle">
   <div id="stopwatch" class="stopwatch">{{this.timeLeft}}</div>
   <div class="buttons">
@@ -10,11 +10,18 @@
   <div *ngFor="let item of respuesta; let i = index">
     <label (click)="validarRes(item)" for="a-4-c">{{item['name']}}</label>
   </div>
-  <a (click)="cargarRespuestasByNiveles(1,true)">Confirm Answer</a>
+  <a (click)="cargarRespuestasByNiveles(1,true,false)">Confirm Answer</a>
 </div>
 
 <div class="box" id="welcome" *ngIf="estado == 0">
   <h2>Just Learn</h2>
   <p>Bienvenido a Just Learn aqui podras reforzar tu mente</p>
-  <a (click)="cargarRespuestasByNiveles(0, false)">Start Game</a>
+  <a (click)="cargarRespuestasByNiveles(0, false,false)">Start Game</a>
+</div>
+
+
+<div class="box" id="finish" *ngIf="estado == 3">
+  <h2>Just Learn</h2>
+  <p>Has Finalizado el Juego, vuelve a la pagina principal de juegos para seguir Jugando</p>
+  <a (click)="cargarRespuestasByNiveles(0, false,false)">Start Game</a>
 </div>
